@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: #ecfdf5;
+  --color-brand-100: #d1fae5;
+  --color-brand-200: #a7f3d0;
+  --color-brand-300: #6ee7b7;
+  --color-brand-400: #34d399;
+  --color-brand-500: #10b981;
+  --color-brand-600: #059669;
+  --color-brand-700: #047857;
+  --color-brand-800: #065f46;
+  --color-brand-900: #064e3b;
+  --color-brand-950: #022c22;
+}
+
+@layer base {
+  body { @apply bg-slate-50 text-slate-800 antialiased; }
+}
+
+@layer components {
+  .btn { @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-150 active:scale-[.98] disabled:pointer-events-none disabled:opacity-50; }
+  .btn-sm { @apply rounded-lg px-3 py-1.5 text-xs; }
+  .btn-primary { @apply bg-brand-600 text-white shadow-md shadow-brand-600/25 hover:bg-brand-700; }
+  .btn-secondary { @apply bg-white text-slate-700 ring-1 ring-slate-200 hover:bg-slate-50; }
+  .btn-ghost { @apply text-slate-600 hover:bg-slate-100; }
+  .btn-danger { @apply bg-rose-50 text-rose-700 hover:bg-rose-100; }
+  .btn-success { @apply bg-emerald-50 text-emerald-700 hover:bg-emerald-100; }
+  .card { @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm; }
+  .input { @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-800 outline-none transition placeholder:text-slate-400 focus:border-brand-500 focus:ring-4 focus:ring-brand-500/15; }
+  .label { @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-slate-500; }
+  .table-base { @apply w-full text-left text-sm; }
+  .table-base th { @apply bg-slate-50/80 px-4 py-3 text-xs font-semibold uppercase tracking-wide whitespace-nowrap text-slate-500; }
+  .table-base td { @apply border-t border-slate-100 px-4 py-3; }
+  .tab { @apply cursor-pointer rounded-lg px-3.5 py-2 text-sm font-semibold text-slate-500 transition hover:text-slate-800; }
+  .tab-active { @apply bg-white text-slate-900 shadow-sm; }
+}
+
+.page-enter-active, .page-leave-active { transition: opacity .18s ease, transform .18s ease; }
+.page-enter-from { opacity: 0; transform: translateY(6px); }
+.page-leave-to { opacity: 0; }
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+}
