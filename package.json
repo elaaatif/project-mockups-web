@@ -1,7 +1,7 @@
 {
   "name": "mockets-portfolio",
   "private": true,
-  "description": "Seven portfolio-grade website mockups built with Vue 3 + FastAPI",
+  "description": "Seven business website demos + a portfolio, all built with Vue 3 + FastAPI (modular MVC)",
   "workspaces": [
     "01-business-management-saas/frontend",
     "02-ai-automation/frontend",
@@ -9,9 +9,11 @@
     "04-booking-reservations/frontend",
     "05-real-estate/frontend",
     "06-education-training/frontend",
-    "07-corporate-lead-generation/frontend"
+    "07-corporate-lead-generation/frontend",
+    "08-portfolio/frontend"
   ],
   "scripts": {
-    "build:all": "npm run build --workspaces"
+    "build:all": "npm run build --workspaces",
+    "smoke:all": ".venv\\Scripts\\python.exe tools/smoke_all.py"
   }
 }
